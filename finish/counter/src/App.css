@@ -67,8 +67,6 @@
 .todos {
   box-shadow: var(--main-box-shadow);
 
-  /* margin-top: 64px; */
-
   overflow-x: hidden;
   overflow-y: auto;
 
