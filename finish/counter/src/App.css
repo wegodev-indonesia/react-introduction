@@ -58,35 +58,3 @@
 .todo-divider {
   border-bottom: 1px solid var(--main-border-color);
 }
-
-.info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%;
-  padding: 16px 0;
-}
-
-.info-total {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: var(--main-font-color);
-  font-size: 12px;
-}
-
-.info-total > p {
-  font-weight: bold;
-}
-
-.delete-all-button {
-  background-color: unset;
-  border: none;
-  padding: unset;
-
-  color: var(--danger-font-color);
-  font-size: 12px;
-  font-weight: bold;
-}
