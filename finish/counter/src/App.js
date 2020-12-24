@@ -1,8 +1,9 @@
 import {useState} from 'react'
 
 import './App.css';
+import Navbar from './components/Navbar'
+import Container from './components/Container'
 
-import shoppingIcon from './assets/shopping-icon.svg'
 import plusIcon from './assets/plus-icon.svg'
 import minusIcon from './assets/minus-icon.svg'
 
@@ -60,12 +61,9 @@ const App = () => {
 
   return (
     <>
-      <nav className="nav">
-        <img className="shopping-icon" src={shoppingIcon} alt="shopping icon" />
-        <h1 className="nav-title">Shopping List</h1>
-      </nav>
+      <Navbar />
 
-      <section className="container">
+      <Container>
         <form className="form" onSubmit={handleSubmit}>
           <input
             className="input"
@@ -111,7 +109,7 @@ const App = () => {
             ))}
           </div>
         ): null}
-      </section>
+      </Container>
     </>
   );
 }
