@@ -3,6 +3,7 @@ import {useState} from 'react'
 import './App.css';
 import Navbar from './components/Navbar'
 import Container from './components/Container'
+import SearchInput from './components/SearchInput'
 
 import plusIcon from './assets/plus-icon.svg'
 import minusIcon from './assets/minus-icon.svg'
@@ -64,15 +65,11 @@ const App = () => {
       <Navbar />
 
       <Container>
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            className="input"
-            onChange={(e) => setValue(e.target.value)}
-            value={value}
-            type="text"
-            placeholder="List" />
-          <button className="add-button" type="submit">add</button>
-        </form>
+        <SearchInput
+          onSubmit={handleSubmit}
+          onChange={(e) => setValue(e.target.value)}
+          value={value}
+          />
 
         <div className="info">
           <div className="info-total">
