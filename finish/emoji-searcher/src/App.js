@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css';
 
+import Navbar from './components/Navbar'
 import Emojis from './components/Emojis'
-import searchIcon from './assets/search-icon.svg'
-import emojiIcon from './assets/emoji-icon.svg'
 
 const App = () => {
   const [emojisData, setEmojisData] = useState([])
@@ -38,11 +37,7 @@ const App = () => {
 
   return (
     <>
-      <nav className="nav">
-        <img style={{ marginRight: 8 }} className="nav-icon" src={emojiIcon} alt="emoji icon" />
-        <img style={{ marginTop: 3 }} className="nav-icon" src={searchIcon} alt="search icon" />
-        <span className="nav-title"> er </span>
-      </nav>
+      <Navbar />
 
       <section className="container">
         <input
