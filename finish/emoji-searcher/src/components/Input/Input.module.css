@@ -1,0 +1,10 @@
+.input {
+  box-shadow: var(--main-box-shadow);
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+
+  color: var(--main-font-color);
+  font-size: 16px;
+  font-weight: 600;
+}

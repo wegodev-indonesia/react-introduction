@@ -4,6 +4,7 @@ import './App.css';
 
 import Navbar from './components/Navbar'
 import Container from './components/Container'
+import Input from './components/Input'
 import Emojis from './components/Emojis'
 
 const App = () => {
@@ -41,15 +42,11 @@ const App = () => {
       <Navbar />
 
       <Container>
-        <input
-          className="input"
-          onChange={handleSearchEmojis}
-          placeholder="Search"
-          value={searchText} />
+        <Input onChange={handleSearchEmojis} value={searchText} />
     
         {loading && <p>Loading....</p>}
         {error && <p>Error!!!</p>}
-        {!loading && !error && (
+        {(!loading && !error) && (
           <Emojis emojisData={emojisData} searchText={searchText} />
         )}
 
