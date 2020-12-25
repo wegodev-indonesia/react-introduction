@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import { searchEmojis } from '../utils/searchEmojis'
-import EmojiBox from '../components/EmojiBox'
+import styles from './Emojis.module.css'
+
+import { searchEmojis } from '../../utils/searchEmojis'
+import EmojiBox from '../EmojiBox'
 
 const Emojis = ({ emojisData, searchText }) => {
   const [filteredEmojis, setfilteredEmojis] = useState([])
@@ -19,7 +21,7 @@ const Emojis = ({ emojisData, searchText }) => {
   }, [emojisData, searchText])
 
   return (
-    <div className="emojis-grid">
+    <div className={styles.emojisGrid}>
       {(!loading && filteredEmojis.length > 0) ? filteredEmojis.map((data, index) => (
         <EmojiBox key={index} title={data.title} symbol={data.symbol} />
       )) : (
