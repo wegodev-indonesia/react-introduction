@@ -28,7 +28,11 @@ const EmojiBox = ({ title, symbol }) => {
         dangerouslySetInnerHTML={{
           __html: `&#${symbol.codePointAt(0)};`
         }} />
-      <p className={styles.emojiText}>{title}</p>
+      <p className={classnames(styles.emojiText, {
+        [styles.selectedText]: selected
+      })}>
+        {selected ? 'Copied!' : title}
+      </p>
     </div>
   )
 }
