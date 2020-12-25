@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './Emojis.module.css'
 
@@ -29,6 +30,11 @@ const Emojis = ({ emojisData, searchText }) => {
       )}
     </div>
   )
+}
+
+Emojis.propTypes = {
+  emojisData: PropTypes.array,
+  searchText: PropTypes.string
 }
 
 export default Emojis
