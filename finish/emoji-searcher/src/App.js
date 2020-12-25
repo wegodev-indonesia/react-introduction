@@ -45,10 +45,7 @@ const App = () => {
     
         {loading && <p>Loading....</p>}
         {error && <p>Error!!!</p>}
-        {(!loading && !error) && (
-          <Emojis emojisData={emojisData} searchText={searchText} />
-        )}
-
+        {emojisData.length > 0 && <Emojis emojisData={emojisData} searchText={searchText} />}
       </Container>
     </>
   );

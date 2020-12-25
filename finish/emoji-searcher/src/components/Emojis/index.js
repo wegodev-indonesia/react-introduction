@@ -18,13 +18,19 @@ const Emojis = ({ emojisData, searchText }) => {
 
   }, [emojisData, searchText])
 
-  return (
-    <div className={styles.emojisGrid}>
-      {filteredEmojis.map((data, index) => (
-        <EmojiBox key={index} title={data.title} symbol={data.symbol} />
-      ))}
-    </div>
-  )
+  if (filteredEmojis.length > 0) {
+    return (
+      <div className={styles.emojisGrid}>
+        {filteredEmojis.map((data, index) => (
+          <EmojiBox key={index} title={data.title} symbol={data.symbol} />
+        ))}
+      </div>
+    )
+  } else {
+    return (
+      <div>NULLLLLL</div>
+    )
+  }
 }
 
 Emojis.propTypes = {
