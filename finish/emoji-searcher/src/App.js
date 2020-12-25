@@ -3,6 +3,7 @@ import axios from 'axios'
 import './App.css';
 
 import Navbar from './components/Navbar'
+import Container from './components/Container'
 import Emojis from './components/Emojis'
 
 const App = () => {
@@ -39,7 +40,7 @@ const App = () => {
     <>
       <Navbar />
 
-      <section className="container">
+      <Container>
         <input
           className="input"
           onChange={handleSearchEmojis}
@@ -52,7 +53,7 @@ const App = () => {
           <Emojis emojisData={emojisData} searchText={searchText} />
         )}
 
-      </section>
+      </Container>
     </>
   );
 }
