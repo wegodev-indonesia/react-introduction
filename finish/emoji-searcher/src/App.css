@@ -43,15 +43,15 @@
   font-weight: 600;
 }
 
-.emojis-grid {
+/* .emojis-grid {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 
   margin-top: 32px;
-}
+} */
 
-.emoji-box {
+/* .emoji-box {
   background-color: var(--secondary-background-color);
   box-shadow: var(--main-box-shadow);
   border-radius: 4px;
@@ -68,9 +68,9 @@
   min-width: 100px;
 
   transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
+} */
 
-.selected {
+/* .selected {
   transform: rotate(32deg) scale(1.4, 1.4);
   box-shadow: var(--main-box-shadow-elevated);
 }
@@ -82,4 +82,4 @@
 .emoji-text {
   font-size: 12px;
   font-weight: 600;
-}
+} */
