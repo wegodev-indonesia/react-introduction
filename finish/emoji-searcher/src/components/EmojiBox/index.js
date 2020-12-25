@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import styles from './EmojiBox.module.css'
@@ -30,6 +31,11 @@ const EmojiBox = ({ title, symbol }) => {
       <p className={styles.emojiText}>{title}</p>
     </div>
   )
+}
+
+EmojiBox.propTypes = {
+  title: PropTypes.string,
+  symbol: PropTypes.string
 }
 
 export default EmojiBox
