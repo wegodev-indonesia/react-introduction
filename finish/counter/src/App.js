@@ -5,6 +5,7 @@ import Container from './components/Container'
 import SearchInput from './components/SearchInput'
 import Info from './components/Info'
 import Todos from './components/Todos'
+import Empty from './components/Empty'
 
 const App = () => {
   const [value, setValue] = useState('')
@@ -86,7 +87,9 @@ const App = () => {
             onSubstraction={(index) => handleSubstractionCount(index)}
             onAdditon={(index) => handleAdditionCount(index)}
           />
-        ): null}
+        ): (
+          <Empty />
+        )}
       </Container>
     </>
   );
