@@ -5,6 +5,7 @@ import styles from './Emojis.module.css'
 
 import { searchEmojis } from '../../utils/searchEmojis'
 import EmojiBox from '../EmojiBox'
+import Empty from '../Empty'
 
 const Emojis = ({ emojisData, searchText }) => {
   const [filteredEmojis, setfilteredEmojis] = useState([])
@@ -28,7 +29,7 @@ const Emojis = ({ emojisData, searchText }) => {
     )
   } else {
     return (
-      <div>NULLLLLL</div>
+      <Empty text="Oops, zero finding. Let's try another keyword!" />
     )
   }
 }

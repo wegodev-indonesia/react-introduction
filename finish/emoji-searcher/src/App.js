@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Container from './components/Container'
 import Input from './components/Input'
 import Emojis from './components/Emojis'
+import Empty from './components/Empty'
 
 const App = () => {
   const [emojisData, setEmojisData] = useState([])
@@ -43,8 +44,8 @@ const App = () => {
       <Container>
         <Input onChange={handleSearchEmojis} value={searchText} />
     
-        {loading && <p>Loading....</p>}
-        {error && <p>Error!!!</p>}
+        {loading && <Empty text="Loading..." />}
+        {error && <Empty text="Error!" />}
         {emojisData.length > 0 && <Emojis emojisData={emojisData} searchText={searchText} />}
       </Container>
     </>
