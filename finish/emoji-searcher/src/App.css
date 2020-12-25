@@ -1,14 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: column;
-
-  min-height: calc(100vh - 55px);
-  max-width: 480px;
-  padding: 16px;
-  margin: 0 auto;
-  background-color: var(--main-container-color);
-}
-
 .input {
   box-shadow: var(--main-box-shadow);
   border: none;
