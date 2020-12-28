@@ -13,20 +13,22 @@ code {
 }
 
 :root {
-  --main-container-color: #fef3c7;
+  --main-brand-color: #fff;
+  --secondary-brand-color: #ef4444;
+
+  --main-container-color: #fff;
   --main-border-color: #e5e7eb;
 
-  --main-background-color: #3b82f6;
+  --main-background-color: #fff;
   --secondary-background-color: #f9fafb;
-  --secondary-background-color-light: #fff;
 
-  --main-font-color: #374151;
+  --main-font-color: #111827;
+  --main-font-color-light: #4b5563;
   --secondary-font-color: #f3f4f6;
   --danger-font-color: #ef4444;
   --label-font-color: #6366f1;
 
-  --main-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  --main-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   --main-box-shadow-elevated: rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   --main-box-shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -36,4 +38,93 @@ code {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--main-background-color);
+  border: 1px solid var(--main-border-color);
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  overflow: hidden;
+}
+
+.aspect-ratio-16-9 {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.img-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secondary-font-color);
+  line-height: 1.25;
+
+  padding: 8px;
+  background: linear-gradient(
+    0deg,
+    rgba(17, 24, 39, 1) 0%,
+    rgba(17, 24, 39, 0.3477766106442577) 70%,
+    rgba(17, 24, 39, 0) 100%
+  );
+}
+
+.news-card-content {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+}
+
+.news-card-desc {
+  font-size: 10px;
+  color: var(--main-font-color-light);
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+
+.news-card-gap {
+  margin-bottom: 16px;
+}
+
+.news-card-date {
+  margin-bottom: 4px;
+
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--secondary-brand-color);
+  letter-spacing: 0.025em;
+}
+
+.news-card-author {
+  margin-bottom: 16px;
+
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--main-font-color);
+  line-height: 1.5;
 }
