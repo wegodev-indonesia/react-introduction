@@ -1,13 +1,16 @@
 .nav {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   text-align: center;
 
   background-color: var(--main-background-color);
-  padding: 0 16px;
-  height: 55px;
+  padding: 12px 16px;
+
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .navTitle {
@@ -17,8 +20,48 @@
   letter-spacing: 0.1em;
 }
 
+.navIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navIcon {
   height: 32px;
   width: 32px;
   margin-right: 8px;
+}
+
+.categories {
+  display: flex;
+
+  width: 100%;
+  padding: 16px 0 0 0;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.categories > a {
+  margin: 0 4px;
+}
+
+.category {
+  padding: 4px 8px;
+  background-color: var(--secondary-brand-color);
+  border-radius: 4px;
+  color: var(--secondary-font-color);
+  font-size: 10px;
+  font-weight: 600;
+
+  text-decoration: none;
 }
