@@ -75,3 +75,12 @@
   color: var(--main-font-color);
   line-height: 1.5;
 }
+
+.url {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--secondary-brand-color);
+  margin-left: auto;
+  margin-top: 16px;
+}

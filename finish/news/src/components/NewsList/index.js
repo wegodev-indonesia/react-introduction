@@ -14,17 +14,17 @@ const NewsList = ({ articles }) => {
         }
         
         return (
-          <>
-            <NewsCard
-              src={article.urlToImage}
-              title={article.title}
-              publishedAt={article.publishedAt}
-              author={article.author}
-              sourceName={article.source.name}
-              description={article.description}
-              notLastChild={!(arr.length === index + 1)}
-            />
-          </>
+          <NewsCard
+            key={index}
+            src={article.urlToImage}
+            title={article.title}
+            publishedAt={article.publishedAt}
+            author={article.author}
+            sourceName={article.source.name}
+            description={article.description}
+            url={article.url}
+            notLastChild={!(arr.length === index + 1)}
+          />
         )
       })}
     </div>
