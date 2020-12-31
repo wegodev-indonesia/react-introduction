@@ -17,6 +17,7 @@ function App() {
       const res = await getTechNews()
 
       if (!res) {
+        setLoading(false)
         setError(true)
         return
       }
