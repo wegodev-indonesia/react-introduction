@@ -66,3 +66,7 @@
 
   text-decoration: none;
 }
+
+.selected {
+  background-color: var(--main-font-color);
+}
