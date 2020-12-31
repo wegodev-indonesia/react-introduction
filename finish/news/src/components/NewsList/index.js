@@ -1,31 +1,33 @@
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import styles from './NewsList.module.css'
+
 import { formatDate } from '../../utils/formatDate'
 
 const NewsList = ({ articles }) => {
   return (
-    <div className="news-list">
+    <div className={styles.newsList}>
       {articles.map((article, index, arr) => (
-        <div key={index} className={classnames('news-card', {
-          'news-card-gap': !(arr.length === index + 1)
+        <div key={index} className={classnames(styles.newsCard, {
+          [styles.newsCardGap]: !(arr.length === index + 1)
         })}>
-          <div className="img-container">
+          <div className={styles.imgContainer}>
             <img
-              className="img"
+              className={styles.img}
               src={article.urlToImage}
               alt={`${article.title} thumbnail img`} />
-            <p className="img-title">{article.title}</p>
+            <p className={styles.imgTitle}>{article.title}</p>
           </div>
 
-          <div className="news-card-content">
+          <div className={styles.newsCardContent}>
 
-            <p className="news-card-date">{formatDate(article.publishedAt)}</p>
-            <p className="news-card-author">
+            <p className={styles.newsCardDate}>{formatDate(article.publishedAt)}</p>
+            <p className={styles.newsCardAuthor}>
               {`${article.author} | ${article.source.name}`}
             </p>
 
-            <p className="news-card-desc">{article.description}</p>
+            <p className={styles.newsCardDesc}>{article.description}</p>
 
           </div>
         </div>

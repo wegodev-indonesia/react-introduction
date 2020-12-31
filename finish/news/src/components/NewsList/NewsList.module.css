@@ -1,0 +1,82 @@
+.newsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsCard {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--main-background-color);
+  border: 1px solid var(--main-border-color);
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  overflow: hidden;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.imgTitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secondary-font-color);
+  line-height: 1.25;
+
+  padding: 8px;
+  background: linear-gradient(
+    0deg,
+    rgba(17, 24, 39, 1) 0%,
+    rgba(17, 24, 39, 0.3477766106442577) 70%,
+    rgba(17, 24, 39, 0) 100%
+  );
+}
+
+.newsCardContent {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+}
+
+.newsCardDesc {
+  font-size: 10px;
+  color: var(--main-font-color-light);
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+
+.newsCardGap {
+  margin-bottom: 16px;
+}
+
+.newsCardDate {
+  margin-bottom: 4px;
+
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--secondary-brand-color);
+  letter-spacing: 0.025em;
+}
+
+.newsCardAuthor {
+  margin-bottom: 16px;
+
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--main-font-color);
+  line-height: 1.5;
+}
