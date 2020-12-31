@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import Navbar from '../components/Navbar'
 import Container from '../components/Container'
 import NewsList from '../components/NewsList'
+import Loading from '../components/Loading'
+import Error from '../components/Error'
 
 import { getNews } from '../services/getNews'
 
@@ -41,9 +43,9 @@ function App() {
     <>
       <Navbar />
       <Container>
-        {loading && <p>Loading...</p>}
-        {error && <p>Error...</p>}
-        {articles.length > 0 && (
+        {loading && <Loading />}
+        {error && <Error />}
+        {(!loading && articles.length > 0) && (
           <NewsList articles={articles} category={category} />
         )}
       </Container>
