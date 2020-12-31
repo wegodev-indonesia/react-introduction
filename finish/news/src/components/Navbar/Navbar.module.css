@@ -9,6 +9,7 @@
   background-color: var(--main-background-color);
   padding: 12px 16px;
 
+  height: 94px;
   max-width: 480px;
   margin: 0 auto;
 }
