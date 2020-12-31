@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 
 import styles from './NewsList.module.css'
+import NewsCard from '../NewsCard'
 
-import { formatDate } from '../../utils/formatDate'
-
-const NewsList = ({ articles, category }) => {
+const NewsList = ({ articles }) => {
   return (
     <div className={styles.newsList}>
       {articles.map((article, index, arr) => {
@@ -16,28 +14,17 @@ const NewsList = ({ articles, category }) => {
         }
         
         return (
-          <div key={index} className={classnames(styles.newsCard, {
-            [styles.newsCardGap]: !(arr.length === index + 1)
-          })}>
-            <div className={styles.imgContainer}>
-              <img
-                className={styles.img}
-                src={article.urlToImage}
-                alt={`${article.title} thumbnail img`} />
-              <p className={styles.imgTitle}>{article.title}</p>
-            </div>
-
-            <div className={styles.newsCardContent}>
-
-              <p className={styles.newsCardDate}>{formatDate(article.publishedAt)}</p>
-              <p className={styles.newsCardAuthor}>
-                {`${article.author} | ${article.source.name}`}
-              </p>
-
-              <p className={styles.newsCardDesc}>{article.description}</p>
-
-            </div>
-          </div>
+          <>
+            <NewsCard
+              src={article.urlToImage}
+              title={article.title}
+              publishedAt={article.publishedAt}
+              author={article.author}
+              sourceName={article.source.name}
+              description={article.description}
+              notLastChild={!(arr.length === index + 1)}
+            />
+          </>
         )
       })}
     </div>
@@ -45,8 +32,7 @@ const NewsList = ({ articles, category }) => {
 }
 
 NewsList.propTypes = {
-  articles: PropTypes.array,
-  category: PropTypes.string
+  articles: PropTypes.array
 }
 
 export default NewsList
