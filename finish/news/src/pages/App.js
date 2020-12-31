@@ -11,7 +11,6 @@ import { getNews } from '../services/getNews'
 
 function App() {
   const [articles, setArticles] = useState([])
-  const [category, setCategory] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
@@ -33,7 +32,6 @@ function App() {
 
       setLoading(false)
       setArticles(res.articles)
-      setCategory(res.category)
     }
 
     fetchTechNews()
@@ -46,7 +44,7 @@ function App() {
         {loading && <Loading />}
         {error && <Error />}
         {(!loading && articles.length > 0) && (
-          <NewsList articles={articles} category={category} />
+          <NewsList articles={articles} />
         )}
       </Container>
     </>
